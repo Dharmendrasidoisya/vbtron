@@ -1,0 +1,10 @@
+{
+    "id": "Botble/services",
+    "name": "Services",
+    "namespace": "Botble\\Services\\",
+    "provider": "Botble\\Services\\Providers\\ServicesServiceProvider",
+     "author": "ADS India",
+    "url": "https://www.goadsindia.com/",
+    "version": "1.0",
+    "description": "Manage Services, servicescategories, servicestags"
+}

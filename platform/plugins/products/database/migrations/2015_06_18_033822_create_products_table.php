@@ -1,0 +1,78 @@
+<?php
+
+use Botble\ACL\Models\User;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class () extends Migration {
+    public function up(): void
+    {
+        Schema::create('productscategories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 120);
+            $table->foreignId('parent_id')->default(0);
+            $table->string('description',0)->nullable();
+            $table->string('shortdescription', 400)->nullable();
+             $table->string('image', 255)->nullable();
+            $table->string('seo_title', 400)->nullable();
+            $table->string('status', 60)->default('published');
+            $table->foreignId('author_id');
+            $table->string('author_type', 255)->default(addslashes(User::class));
+            $table->string('icon', 60)->nullable();
+            $table->tinyInteger('order')->default(0);
+            $table->tinyInteger('is_featured')->default(0);
+            $table->tinyInteger('is_default')->unsigned()->default(0);
+            $table->timestamps();
+        });
+
+        Schema::create('productstags', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 120);
+            $table->foreignId('author_id');
+            $table->string('author_type', 255)->default(addslashes(User::class));
+            $table->string('description', 400)->nullable()->default('');
+            $table->string('status', 60)->default('published');
+            $table->timestamps();
+        });
+
+        Schema::create('productsposts', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 255);
+            $table->string('description')->nullable();
+            $table->longText('content')->nullable();
+            $table->longText('specification')->nullable();
+            $table->string('status', 60)->default('published');
+            $table->foreignId('author_id');
+            $table->string('author_type', 255)->default(addslashes(User::class));
+            $table->tinyInteger('is_featured')->unsigned()->default(0);
+            $table->string('image', 255)->nullable();
+            $table->json('images')->nullable()->change();
+			   $table->string('pdf')->nullable();
+               	   $table->string('manual')->nullable();
+            $table->integer('views')->unsigned()->default(0);
+            $table->string('format_type', 30)->nullable();
+            $table->timestamps();
+        });
+
+        Schema::create('productsposts_tags', function (Blueprint $table) {
+            $table->foreignId('tag_id')->index();
+            $table->foreignId('post_id')->index();
+        });
+
+        Schema::create('productsposts_categories', function (Blueprint $table) {
+            $table->foreignId('category_id')->index();
+            $table->foreignId('post_id')->index();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('productsposts_tags');
+        Schema::dropIfExists('productsposts_categories');
+        Schema::dropIfExists('productsposts');
+        Schema::dropIfExists('productscategories');
+        Schema::dropIfExists('productstags');
+    }
+};

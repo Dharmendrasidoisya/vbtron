@@ -1,0 +1,10 @@
+{
+    "id": "Botble/application",
+    "name": "Application",
+    "namespace": "Botble\\Application\\",
+    "provider": "Botble\\Application\\Providers\\ApplicationServiceProvider",
+     "author": "ADS India",
+    "url": "https://www.goadsindia.com/",
+    "version": "1.0",
+    "description": "Manage Application, applicationcategories, applicationtags"
+}

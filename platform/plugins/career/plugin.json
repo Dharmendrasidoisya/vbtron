@@ -1,0 +1,10 @@
+{
+    "id": "botble/career",
+    "name": "Career",
+    "namespace": "Botble\\Career\\",
+    "provider": "Botble\\Career\\Providers\\CareerServiceProvider",
+    "author": "ADS India",
+    "url": "https://www.goadsindia.com/",
+    "version": "2.0.0",
+    "description": "Frequently Asked Question(s) Career"
+}
