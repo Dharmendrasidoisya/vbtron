@@ -1,0 +1,10 @@
+{
+    "id": "Botble/products",
+    "name": "Products",
+    "namespace": "Botble\\Products\\",
+    "provider": "Botble\\Products\\Providers\\ProductsServiceProvider",
+     "author": "ADS India",
+    "url": "https://www.goadsindia.com/",
+    "version": "1.0",
+    "description": "Manage Products, productscategories, productstags"
+}

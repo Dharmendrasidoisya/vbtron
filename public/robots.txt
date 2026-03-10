@@ -1,0 +1,7 @@
+# go away
+
+User-agent: *
+
+Allow: /
+
+sitemap: https://www.spmengineers.com/sitemap.xml
