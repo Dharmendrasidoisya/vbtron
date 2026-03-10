@@ -38,12 +38,17 @@ $applicationposts = DB::table('applicationposts')->where('status', 'published')-
                             <div class="rs-services-item">
                                 <div class="rs-services-thumb">
                             <img
+<<<<<<< HEAD
                                             src="{{ RvMedia::getImageUrl($post->image) }}" alt="{{ $post->name }}">
+=======
+                                            src="assets/images/services/services-thumb-08.png" alt="image">
+>>>>>>> vbtronnew/main
                                 </div>
                                 <div class="rs-services-content">
                                     <h5 class="rs-services-title"> {!! $post->name !!}
                                        </h5>
                                     {{-- <p class="descrip">{{ \Illuminate\Support\Str::limit($post->description, 50) }}</p> --}}
+<<<<<<< HEAD
                       {{-- {{ Str::slug(str_replace('&', '', html_entity_decode($post->name))) }} --}}
                                             <a class="rs-text-btn"
                                                 href="   {{ url('application/' . Str::slug(str_replace('&', '', html_entity_decode($post->name)))) }} ">
@@ -52,6 +57,10 @@ $applicationposts = DB::table('applicationposts')->where('status', 'published')-
                                        
                                 </div>
                                 
+=======
+                        
+                                </div>
+>>>>>>> vbtronnew/main
                             </div>
                         </div>
                     </div>

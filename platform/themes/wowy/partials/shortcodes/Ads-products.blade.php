@@ -1,5 +1,11 @@
 <!-- Our products -->
+<<<<<<< HEAD
 
+=======
+<?php
+// dd($products);
+?>
+>>>>>>> vbtronnew/main
 {{-- 
 <div class="px-3 px-xl-0 border-radius-2 text-light mt-5 mt-lg-0 p-relative overflow-hidden"
     style="background-color: #f4f4f4 !important;">
@@ -231,21 +237,37 @@
                                 data-item-md="2" data-item-sm="2" data-item-xs="1" data-item-mobile="1"
                                 data-margin="30">
                                 <div class="swiper-wrapper">
+<<<<<<< HEAD
                                     <div class="swiper-slide">
                                         <div class="rs-portfolio-item">
                                             <div class="rs-portfolio-thumb">
                                                 <img src="assets/images/portfolio/portfolio-thumb-36.png" loading="lazy"
+=======
+                                       @foreach ($products as $product)
+                                    <div class="swiper-slide">
+                                        <div class="rs-portfolio-item">
+                                            <div class="rs-portfolio-thumb">
+                                                <img src="{{ RvMedia::getImageUrl($product->image) }}" loading="lazy"
+>>>>>>> vbtronnew/main
                                                     alt="image">
                                             </div>
                                             <div class="rs-portfolio-content">
                                                 <h5 class="rs-portfolio-title underline has-white">
+<<<<<<< HEAD
                                                     <a href="#">Single Display Universal Input Temperature
                                                         Controller</a>
+=======
+                                                    <a href="{{ $product->url }}">   {{ $product->name }}</a>
+>>>>>>> vbtronnew/main
                                                 </h5>
 
                                             </div>
                                             <div class="rs-portfolio-btn">
+<<<<<<< HEAD
                                                 <a class="rs-btn has-theme-light-green has-circle has-icon " href="#">
+=======
+                                                <a class="rs-btn has-theme-light-green has-circle has-icon " href="{{ $product->url }}">
+>>>>>>> vbtronnew/main
                                                     <span class="icon-box">
                                                         <svg class="icon-first " xmlns="http://www.w3.org/2000/svg"
                                                             viewBox="0 0 32 32">
@@ -264,7 +286,12 @@
                                             </div>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <div class="swiper-slide">
+=======
+                                    @endforeach
+                                    {{-- <div class="swiper-slide">
+>>>>>>> vbtronnew/main
                                         <div class="rs-portfolio-item">
                                             <div class="rs-portfolio-thumb">
                                                 <img src="assets/images/portfolio/portfolio-thumb-37.png" loading="lazy"
@@ -391,7 +418,11 @@
                                                 </a>
                                             </div>
                                         </div>
+<<<<<<< HEAD
                                     </div>
+=======
+                                    </div> --}}
+>>>>>>> vbtronnew/main
                                 </div>
                                 <!-- if we need pagination -->
                                 <div class="rs-portfolio-pagination">

@@ -99,7 +99,11 @@ app()->booted(function () {
             __('Ads Products'),
             
             function (Shortcode $shortcode) {
+<<<<<<< HEAD
                 $products = get_featured_products_posts(array_merge([
+=======
+                $products = get_featured_products_categories(array_merge([
+>>>>>>> vbtronnew/main
                     'take' => (int)$shortcode->limit ?: 50,
                 ], ));
                 return Theme::partial('shortcodes.Ads-products', [
@@ -741,6 +745,35 @@ shortcode()->setAdminConfig('Ads-productcategory', function (array $attributes) 
         });
         
     // }
+<<<<<<< HEAD
+=======
+
+
+
+
+  add_shortcode(
+            'Ads-events',
+            __('Ads-events'),
+            __('Ads-events'),
+            function (Shortcode $shortcode) {
+                return Theme::partial('shortcodes.Ads-events', [
+                   'title' => $shortcode->title,
+                    'shorttitle' => $shortcode->shorttitle,
+                     'icon' => $shortcode->icon, 
+                     'history' => $shortcode->history,
+                     'mission' => $shortcode->mission,
+                     'vision' => $shortcode->vision,
+                    'shortcode' => $shortcode,
+                ]);
+            }
+        );
+    
+        shortcode()->setAdminConfig('Ads-events', function (array $attributes) {
+            return Theme::partial('shortcodes.Ads-events-admin-config', compact('attributes'));
+        });
+
+
+>>>>>>> vbtronnew/main
     if (is_plugin_active('ecommerce')) {
         
         add_shortcode(

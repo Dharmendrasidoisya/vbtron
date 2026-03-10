@@ -12580,7 +12580,11 @@ html.lenis body {
   z-index: 2;
 }
 .rs-footer-two.has-space {
+<<<<<<< HEAD
   padding-top: 50px;
+=======
+  padding-top: 200px;
+>>>>>>> vbtronnew/main
 }
 @media only screen and (max-width: 767px) {
   .rs-footer-two.has-space {
